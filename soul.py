@@ -16,11 +16,11 @@ from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 
 loop = asyncio.get_event_loop()
 
-TOKEN = ''
+TOKEN = '7861667002:AAFJztFKLX0KUe2mIm13xmaX3ZQpqKew_nE'
 MONGO_URI = 'mongodb+srv://Bishal:Bishal@bishal.dffybpx.mongodb.net/?retryWrites=true&w=majority&appName=Bishal'
-FORWARD_CHANNEL_ID = -1002156421934
-CHANNEL_ID = -1002156421934
-error_channel_id = -1002156421934
+FORWARD_CHANNEL_ID = -4687835159
+CHANNEL_ID = -4687835159
+error_channel_id = -4687835159
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
@@ -59,7 +59,7 @@ async def start_asyncio_loop():
         await asyncio.sleep(REQUEST_INTERVAL)
 
 async def run_attack_command_async(target_ip, target_port, duration):
-    process = await asyncio.create_subprocess_shell(f"./soul {target_ip} {target_port} {duration} 900")
+    process = await asyncio.create_subprocess_shell(f"./raja {target_ip} {target_port} {duration} 1200")
     await process.communicate()
     bot.attack_in_progress = False
 
